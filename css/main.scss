@@ -1,4 +1,5 @@
 $primary-bg: black;
+$secondary-bg: white;
 $primary-fontColor: white;
 $primary-overlay: rgba(0, 0, 0, 0.4);
 $mobile-nav-overlay: rgba(0, 0, 0, 0.8);
@@ -28,6 +29,18 @@ header {
 
     .logo {
       width: 400px;
+      z-index: 1;
+
+      img {
+        opacity: 1;
+        transition: opacity 0.4s;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.5;
+        }
+      }
     }
   }
 
@@ -42,6 +55,7 @@ header {
       width: 100%;
       justify-content: space-evenly;
       align-items: center;
+      z-index: 1;
     }
 
     .nav-item {
@@ -52,6 +66,7 @@ header {
   }
 
   .toggle {
+    z-index: 9999;
     position: relative;
     height: 20px;
     display: none;
@@ -114,12 +129,12 @@ a {
 
   #video-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
+    top: 0;
+    left: 0;
     min-width: 100%;
+    min-height: 100%;
+    width: auto;
     height: auto;
-    transform: translate(-50%, -50%);
   }
   video {
     display: block;
