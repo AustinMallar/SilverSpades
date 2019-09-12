@@ -4,6 +4,12 @@ $primary-fontColor: white;
 $primary-overlay: rgba(0, 0, 0, 0.4);
 $mobile-nav-overlay: rgba(0, 0, 0, 0.8);
 
+@mixin container-props {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,10 +23,13 @@ body {
 
 header {
   z-index: 2;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  width: 100%;
   background: $primary-bg;
+
+  .container-header {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    @include container-props();
+  }
 
   .brand {
     display: flex;
@@ -72,10 +81,32 @@ header {
     display: none;
     margin-right: 2em;
 
+    &.toggle-on {
+      .hamburger,
+      .hamburger::before,
+      .hamburger::after {
+        background: $primary-bg;
+      }
+
+      .hamburger::after {
+        opacity: 0;
+      }
+
+      .hamburger::before {
+        transform: rotate(45deg);
+      }
+
+      .hamburger {
+        transform: rotate(-45deg);
+      }
+    }
+
     .hamburger {
       height: 2px;
       width: 30px;
       background: $primary-fontColor;
+      transform: rotate(0deg);
+      transition: transform 0.3s;
 
       &::before {
         content: "";
@@ -84,6 +115,8 @@ header {
         height: 2px;
         width: 30px;
         background: $primary-fontColor;
+        transform: rotate(0deg);
+        transition: transform 0.3s;
       }
 
       &::after {
@@ -94,6 +127,8 @@ header {
         width: 30px;
         transform: translateY(50%);
         background: $primary-fontColor;
+        opacity: 1;
+        transition: opacity 0.3s;
       }
     }
   }
@@ -168,7 +203,7 @@ a {
 
 /* Media Queries */
 
-@media only screen and (max-width: 767px) {
+@media all and (max-width: 767px) {
   .nav-list {
     position: fixed;
     top: 0;
@@ -179,7 +214,7 @@ a {
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-100%);
-    background: black;
+    background: white;
     transition: all 0.8s;
 
     &.open {
@@ -196,5 +231,9 @@ a {
 
   nav {
     justify-content: flex-end !important;
+  }
+
+  .container-header {
+    grid-template-columns: 65% 35% !important;
   }
 }

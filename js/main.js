@@ -38,9 +38,11 @@ const entrance = () => {
 toggle.addEventListener("click", () => {
   if (navList.classList.contains("open")) {
     navList.classList.remove("open");
+    toggle.classList.remove("toggle-on");
     document.querySelector("body").style.overflow = "auto";
   } else {
     navList.classList.add("open");
+    toggle.classList.add("toggle-on");
     document.querySelector("body").style.overflow = "hidden";
     TweenMax.staggerFrom(
       ".nav-item",
