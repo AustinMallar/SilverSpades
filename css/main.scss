@@ -54,15 +54,15 @@ header {
   .brand {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     .logo {
-      width: 400px;
       z-index: 1;
+      width: 90%;
 
       img {
         opacity: 1;
-        transition: opacity 0.4s;
+        transition: 0.4s;
       }
 
       &:hover {
@@ -82,7 +82,7 @@ header {
       list-style-type: none;
       display: flex;
       width: 100%;
-      justify-content: space-evenly;
+      justify-content: flex-end;
       align-items: center;
       z-index: 1;
     }
@@ -91,6 +91,7 @@ header {
       a {
         position: relative;
         color: $primary-fontColor;
+        margin: 0 1.5em;
 
         &::before {
           content: "";
@@ -118,30 +119,29 @@ header {
     display: none;
     margin-right: 2em;
 
-    &.toggle-on {
-      .hamburger:nth-of-type(1) {
-        background: $primary-bg;
-        transform: rotate(-45deg);
-      }
+    // &.toggle-on {
+    //   .hamburger:nth-of-type(1) {
+    //     background: $primary-bg;
+    //     transform: rotate(-45deg);
+    //   }
 
-      .hamburger:nth-of-type(2) {
-        opacity: 0;
-      }
+    //   .hamburger:nth-of-type(2) {
+    //     opacity: 0;
+    //   }
 
-      .hamburger:nth-of-type(3) {
-        background: $primary-bg;
-        transform: rotate(45deg);
-      }
-    }
+    //   .hamburger:nth-of-type(3) {
+    //     background: $primary-bg;
+    //     transform: rotate(45deg);
+    //   }
+    // }
 
     .hamburger:nth-of-type(1) {
-      position: relative;
+      position: absolute;
       height: 2px;
       width: 30px;
       background: $primary-fontColor;
-      transform-origin: right;
+      transform-origin: left;
       transform: rotate(0deg);
-      transition: transform 0.3s;
     }
 
     .hamburger:nth-of-type(2) {
@@ -150,20 +150,19 @@ header {
       left: 0;
       height: 2px;
       width: 30px;
+      transform-origin: left;
       background: $primary-fontColor;
-      transition: transform 0.3s;
     }
 
     .hamburger:nth-of-type(3) {
       position: absolute;
-      bottom: -15%;
+      bottom: -20%;
       left: 0;
       height: 2px;
       width: 30px;
       background: $primary-fontColor;
-      transform-origin: right;
+      transform-origin: left;
       transform: rotate(0deg) translateY(-50%);
-      transition: transform 0.3s;
     }
   }
 }
@@ -247,11 +246,13 @@ a {
     height: 100%;
     width: 100%;
     flex-direction: column;
+    justify-content: center !important;
     transform-origin: top;
     transform: scaleY(0);
     background: white;
 
     .nav-item {
+      margin: 1.5em 0;
       a {
         color: $secondary-fontColor;
         font-size: 1.5rem;
@@ -272,7 +273,7 @@ a {
   }
 
   .container-header {
-    grid-template-columns: 65% 35% !important;
+    grid-template-columns: 75% 25% !important;
   }
 
   .social-icons {
