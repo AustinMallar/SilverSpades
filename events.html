@@ -25,7 +25,9 @@
           <ul class="nav-list">
             <li class="nav-item"><a href="/">HOME</a></li>
             <li class="nav-item"><a href="videos.html">VIDEOS</a></li>
-            <li class="nav-item"><a class="active" href="events.html">EVENTS</a></li>
+            <li class="nav-item">
+              <a class="active" href="events.html">EVENTS</a>
+            </li>
             <li class="nav-item"><a href="shops.html">SHOPS</a></li>
           </ul>
           <div class="toggle">
@@ -36,7 +38,15 @@
         </nav>
       </div>
     </header>
-
+    <div data-router-wrapper>
+      <div data-router-view="events">
+        <section style="background: purple">
+          <div class="container">
+            <h1>Events</h1>
+          </div>
+        </section>
+      </div>
+    </div>
     <script defer src="js/main.js"></script>
   </body>
 </html>

@@ -1,8 +1,10 @@
 import { TimelineMax, Expo } from "gsap";
+import Highway from "@dogstudio/highway";
+
+import Fade from "./fade.js";
 
 const toggle = document.querySelector(".toggle");
-const navLinks = Array.from(document.querySelectorAll(".nav-item"));
-const menu = document.querySelector(".nav-list");
+const links = document.querySelectorAll(".nav-item a");
 let menuOpen = false;
 var t1 = new TimelineMax({ paused: true });
 var t2 = new TimelineMax();
@@ -31,6 +33,7 @@ t2.staggerFrom(
   "-=1"
 );
 
+//Timeline for mobile nav menu
 if (window.innerWidth < 768) {
   t1.to(".nav-list", 1, {
     scaleY: 1,
@@ -39,17 +42,11 @@ if (window.innerWidth < 768) {
   });
   t1.staggerFrom(
     ".nav-item",
-    1,
-    { y: -200, opacity: 0, ease: Expo.easeOut },
+    0.5,
+    { x: -200, opacity: 0, ease: Expo.easeOut },
     0.3
   );
 }
-
-// navLinks.forEach(link => {
-//   link.style.transform = "translate(0)";
-//   link.style.opacity = "1";
-// });
-// menu.style.transform = scaleY(0);
 
 toggle.addEventListener("click", () => {
   if (menuOpen) {
@@ -64,4 +61,31 @@ toggle.addEventListener("click", () => {
     menuOpen = true;
   }
 });
-window.addEventListener("resize");
+
+// Call Highway.Core once.
+const H = new Highway.Core({
+  transitions: {
+    default: Fade
+  }
+});
+
+// Listen the `NAVIGATE_IN` event
+// This event is sent everytime a `data-router-view` is added to the DOM Tree
+H.on("NAVIGATE_IN", ({ to, location }) => {
+  // Check Active Link
+  for (let i = 0; i < links.length; i++) {
+    const link = links[i];
+
+    // Clean class
+    link.classList.remove("active");
+
+    // Active link
+    if (link.href === location.href) {
+      link.classList.add("active");
+    }
+  }
+
+  t1.reverse();
+  menuOpen = false;
+  toggle.classList.remove("toggle-on");
+});
