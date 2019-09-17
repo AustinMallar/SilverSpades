@@ -105,6 +105,8 @@ H.on("NAVIGATE_IN", ({ to, location }) => {
   }
 
   t1.reverse();
+  t2.play();
+
   menuOpen = false;
   toggle.classList.remove("toggle-on");
 });
