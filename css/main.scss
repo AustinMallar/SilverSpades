@@ -43,6 +43,7 @@ body {
 }
 
 header {
+  background: $primary-bg;
   z-index: 2;
 
   .container-header {
@@ -175,6 +176,10 @@ a {
   text-decoration: none;
 }
 
+section {
+  position: relative;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -196,7 +201,6 @@ a {
   }
 
   #video-bg {
-    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -210,16 +214,12 @@ a {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
     z-index: -100;
   }
 }
 
 .social-icons {
   position: absolute;
-  height: 20%;
   top: 50%;
   left: 2%;
   transform: translate(-50%, -50%);
@@ -232,7 +232,7 @@ a {
   i {
     color: $primary-fontColor;
     font-size: 2rem;
-    margin: 0 0.5em;
+    margin: 0.25em 0;
   }
 }
 
