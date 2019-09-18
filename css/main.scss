@@ -69,6 +69,7 @@ header {
       img {
         opacity: 1;
         transition: 0.4s;
+        vertical-align: middle;
       }
 
       &:hover {
@@ -219,13 +220,13 @@ section {
 
   #video-bg {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
-
 }
 
 .social-icons {
