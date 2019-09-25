@@ -40,7 +40,8 @@ if (window.innerWidth < 768) {
     0.3,
     {
       width: "0px",
-      ease: Expo.easeIn
+      ease: Expo.easeIn,
+      immediateRender: false
     },
     0.1
   );
