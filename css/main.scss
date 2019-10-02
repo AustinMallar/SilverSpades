@@ -5,7 +5,7 @@ $primary-bg: black;
 $secondary-bg: white;
 $primary-fontColor: white;
 $secondary-fontColor: black;
-$accent: #F53258;
+$accent: #f53258;
 $primary-overlay: rgba(0, 0, 0, 0.3);
 $mobile-nav-overlay: rgba(0, 0, 0, 0.8);
 $header-padding: 0.4em 0;
@@ -311,6 +311,10 @@ section {
     }
   }
 
+  h1 {
+    font-size: 3rem;
+  }
+
   .toggle {
     display: block !important;
   }
@@ -330,5 +334,4 @@ section {
       font-size: 1.8rem;
     }
   }
-
 }

@@ -2,6 +2,7 @@ import { TimelineMax, Expo } from "gsap";
 import Highway from "@dogstudio/highway";
 
 import Fade from "./fade.js";
+import { brotliDecompressSync } from "zlib";
 
 const toggle = document.querySelector(".toggle");
 const links = document.querySelectorAll(".nav-item a");
@@ -110,4 +111,5 @@ H.on("NAVIGATE_IN", ({ to, location }) => {
 
   menuOpen = false;
   toggle.classList.remove("toggle-on");
+  document.body.style.overflow = "auto";
 });
