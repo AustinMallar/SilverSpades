@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-$(document).ready(function() {
+const videoModal = $(document).ready(function() {
   /* Toggle Video Modal
   -----------------------------------------*/
   function toggle_video_modal() {
@@ -59,3 +59,5 @@ $(document).ready(function() {
   }
   toggle_video_modal();
 });
+
+module.exports = videoModal;

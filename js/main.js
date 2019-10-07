@@ -2,7 +2,7 @@ import { TimelineMax, Expo } from "gsap";
 import Highway from "@dogstudio/highway";
 
 import Fade from "./fade.js";
-import { brotliDecompressSync } from "zlib";
+import HomeRenderer from "./Renderers/homeRenderer.js";
 
 const toggle = document.querySelector(".toggle");
 const links = document.querySelectorAll(".nav-item a");
@@ -21,18 +21,6 @@ t2.from(".nav-list", 0.7, {
 t2.from(".toggle", 1, {
   opacity: 0
 });
-
-t2.staggerFrom(
-  ".social-icons i",
-  1,
-  {
-    opacity: 0,
-    x: -20,
-    ease: Expo.easeInOut
-  },
-  0.3,
-  "-=1"
-);
 
 //Timeline for mobile nav menu
 if (window.innerWidth < 768) {
@@ -87,6 +75,9 @@ toggle.addEventListener("click", () => {
 const H = new Highway.Core({
   transitions: {
     default: Fade
+  },
+  renderers: {
+    home: HomeRenderer
   }
 });
 
