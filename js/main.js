@@ -60,6 +60,7 @@ if (window.innerWidth < 768) {
 }
 
 toggle.addEventListener("click", () => {
+  console.log("clicked");
   if (menuOpen) {
     document.querySelector("body").style.overflow = "auto";
     t1.reverse();
