@@ -23,7 +23,7 @@ t2.from(".toggle", 1, {
 });
 
 //Timeline for mobile nav menu
-if (window.innerWidth < 768) {
+if (window.innerWidth < 1025) {
   t1.staggerTo(
     ".hamburger",
     0.3,

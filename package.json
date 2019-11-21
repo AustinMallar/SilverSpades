@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel-plugin-imagemin": "^3.0.0",
     "sass": "^1.23.0-module.beta.1"
   },
   "dependencies": {
