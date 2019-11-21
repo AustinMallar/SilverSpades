@@ -296,62 +296,6 @@ section {
 
 /* Media Queries */
 
-@media all and (max-width: 767px) {
-  .nav-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center !important;
-    transform-origin: top;
-    transform: scaleY(0);
-    background: white;
-
-    .nav-item {
-      margin: 1.5em 0;
-
-      a {
-        color: $secondary-fontColor;
-        font-size: 1.5rem;
-
-        &::before {
-          background: $primary-bg;
-        }
-      }
-    }
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  .toggle {
-    display: block !important;
-  }
-
-  nav {
-    justify-content: flex-end !important;
-  }
-
-  .container-header {
-    grid-template-columns: 75% 25% !important;
-  }
-
-  .hero {
-    height: 30vh;
-  }
-
-  .social-icons {
-    left: 5%;
-
-    i {
-      font-size: 1.8rem;
-    }
-  }
-}
-
 @media all and (max-width: 1024px) {
   .nav-list {
     position: fixed;
@@ -397,6 +341,62 @@ section {
 
   .hero {
     height: 50vh;
+  }
+
+  .social-icons {
+    left: 5%;
+
+    i {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center !important;
+    transform-origin: top;
+    transform: scaleY(0);
+    background: white;
+
+    .nav-item {
+      margin: 1.5em 0;
+
+      a {
+        color: $secondary-fontColor;
+        font-size: 1.5rem;
+
+        &::before {
+          background: $primary-bg;
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .toggle {
+    display: block !important;
+  }
+
+  nav {
+    justify-content: flex-end !important;
+  }
+
+  .container-header {
+    grid-template-columns: 75% 25% !important;
+  }
+
+  .hero {
+    height: 30vh;
   }
 
   .social-icons {
