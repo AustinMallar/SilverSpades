@@ -84,6 +84,31 @@ class HomeRenderer extends Highway.Renderer {
       },
       0.3
     );
+
+    // function fadeInHeading() {
+    //   let options = {
+    //     root: null,
+    //     rootMargin: "0px",
+    //     threshold: 1.0
+    //   };
+    //   let callback = (entries, observer) => {
+    //     entries.forEach(entry => {
+    //       if (entry.intersectionRatio > 0.9) {
+    //         TweenLite.fromTo(
+    //           ".main-heading",
+    //           1,
+    //           { autoAlpha: 0, y: -20 },
+    //           { autoAlpha: 1, y: 0 }
+    //         );
+    //         observer.unobserve(entry.target);
+    //       }
+    //     });
+    //   };
+    //   let observer = new IntersectionObserver(callback, options);
+    //   let target = document.querySelector("#home-intro");
+    //   observer.observe(target);
+    // }
+    // fadeInHeading();
   }
   onLeaveCompleted() {}
 }

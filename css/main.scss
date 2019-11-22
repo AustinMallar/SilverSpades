@@ -283,8 +283,8 @@ section {
 }
 
 .future__accent {
-  -webkit-text-stroke: 2px $accent;
-  text-stroke: 2px $accent;
+  -webkit-text-stroke: 2px $primary-fontColor;
+  text-stroke: 2px $primary-fontColor;
   -webkit-text-fill-color: black;
   text-fill-color: black;
 }
