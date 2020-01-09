@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build --no-content-hash index.html"
   },
   "keywords": [],
   "author": "",
@@ -13,15 +13,15 @@
   "devDependencies": {
     "cssnano": "^4.1.10",
     "parcel-plugin-imagemin": "^3.0.0",
-    "sass": "^1.23.0-module.beta.1"
+    "sass": "^1.24.3"
   },
   "dependencies": {
     "@dogstudio/highway": "^2.1.3",
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.7.3",
     "gsap": "^2.1.3",
     "jquery": "^3.4.1",
-    "materialize-css": "^1.0.0-rc.2",
-    "parcel-bundler": "^1.12.3",
-    "postcss-modules": "^1.4.1"
+    "materialize-css": "^1.0.0",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.5.0"
   }
 }
