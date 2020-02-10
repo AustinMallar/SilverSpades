@@ -1,6 +1,7 @@
 @import "../node_modules/materialize-css/sass/materialize.scss";
 @import "./video-modal.scss";
 
+/* COLOURS */
 $primary-bg: black;
 $secondary-bg: white;
 $primary-fontColor: white;
@@ -8,7 +9,13 @@ $secondary-fontColor: black;
 $accent: #f53258;
 $primary-overlay: rgba(0, 0, 0, 0.1);
 $mobile-nav-overlay: rgba(0, 0, 0, 0.8);
+
+/* SPACING */
 $header-padding: 0.4em 0;
+
+/* BREAKPOINTS */
+
+$mobile: 768px;
 
 @font-face {
   font-family: "HelveticaNeue";
@@ -285,8 +292,8 @@ section {
 .future__accent {
   -webkit-text-stroke: 2px $primary-fontColor;
   text-stroke: 2px $primary-fontColor;
-  -webkit-text-fill-color: black;
-  text-fill-color: black;
+  -webkit-text-fill-color: $secondary-fontColor;
+  text-fill-color: $secondary-fontColor;
 }
 
 .heading__founded {
@@ -307,7 +314,7 @@ section {
     justify-content: center !important;
     transform-origin: top;
     transform: scaleY(0);
-    background: white;
+    background: $secondary-bg;
 
     .nav-item {
       margin: 1.5em 0;
@@ -363,7 +370,7 @@ section {
     justify-content: center !important;
     transform-origin: top;
     transform: scaleY(0);
-    background: white;
+    background: $secondary-bg;
 
     .nav-item {
       margin: 1.5em 0;
@@ -415,5 +422,13 @@ section {
     + .video--play-icon {
       transform: translate(-50%, -50%) scale(1.5);
     }
+  }
+}
+
+.video-item {
+  $video-margin: 0.7em;
+
+  @media screen and (max-width: $mobile) {
+    margin: $video-margin 0;
   }
 }
