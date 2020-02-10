@@ -17,6 +17,12 @@ $header-padding: 0.4em 0;
 
 $mobile: 768px;
 
+/* MIXINS */
+
+@mixin center-element-abs {
+  transform: translate(-50%, -50%);
+}
+
 @font-face {
   font-family: "HelveticaNeue";
   src: url("../assets/fonts/neue/HelveticaNeue-Light.otf");
@@ -39,6 +45,12 @@ $mobile: 768px;
   font-family: "HelveticaNeue";
   src: url("../assets/fonts/neue/HelveticaNeue-Heavy.otf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "NexaLight";
+  src: url("../assets/fonts/nexa/Nexa\ Light.otf");
+  font-weight: 400;
 }
 
 @mixin container-props {
@@ -245,10 +257,40 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
     object-fit: cover;
+    @include center-element-abs();
+  }
+
+  &__logo {
+    width: 75%;
+    min-width: 440px;
+    max-width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include center-element-abs();
+  }
+
+  &__sub-headline {
+    font-family: "NexaLight";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    padding-top: 4em;
+    text-align: center;
+    color: $primary-fontColor;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    @include center-element-abs();
+
+    @media screen and (max-width: $mobile) {
+      font-size: 1rem;
+      padding-top: 2em;
+    }
   }
 }
 
@@ -346,9 +388,9 @@ section {
     grid-template-columns: 75% 25% !important;
   }
 
-  .hero {
-    height: 50vh;
-  }
+  // .hero {
+  //   height: 50vh;
+  // }
 
   .social-icons {
     left: 5%;
@@ -402,9 +444,9 @@ section {
     grid-template-columns: 75% 25% !important;
   }
 
-  .hero {
-    height: 30vh;
-  }
+  // .hero {
+  //   height: 30vh;
+  // }
 
   .social-icons {
     left: 5%;
