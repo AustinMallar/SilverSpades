@@ -34,6 +34,7 @@ if (window.innerWidth < 1025) {
     },
     0.1
   );
+
   t1.to(".nav-list", 1, {
     scaleY: 1,
     ease: Expo.easeIn,
@@ -47,15 +48,22 @@ if (window.innerWidth < 1025) {
     0.3
   );
 
-  t1.to("#ham1", 0.3, {
-    width: "30px",
+  t1.to("#ham1", 0.1, {
     rotation: 45,
     background: "black"
   });
-  t1.to("#ham2", 0.3, {
-    width: "30px",
+
+  t1.to("#ham2", 0.1, {
     rotation: -45,
     background: "black"
+  });
+
+  t1.to("#ham1", 0.2, {
+    width: "30px"
+  });
+
+  t1.to("#ham2", 0.2, {
+    width: "30px"
   });
 }
 
