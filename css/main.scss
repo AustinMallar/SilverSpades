@@ -228,7 +228,11 @@ section {
 .hero {
   height: 90vh;
   overflow: hidden;
-  background: $primary-bg;
+  background-image: url("../assets/img/silver-spades-banner.png");
+  background-attachment: scroll;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &::after {
     content: "";
@@ -255,7 +259,6 @@ section {
     left: 50%;
     height: 100%;
     width: 100%;
-    z-index: 4;
     object-fit: cover;
     @include center-element-abs();
   }
@@ -267,7 +270,6 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 5;
     @include center-element-abs();
   }
 
@@ -283,7 +285,6 @@ section {
     font-size: 1.7rem;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    z-index: 5;
     @include center-element-abs();
 
     @media screen and (max-width: $mobile) {
