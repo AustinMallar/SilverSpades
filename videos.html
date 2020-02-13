@@ -1,53 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" href="./assets/img/favicon.png" />
-    <title>Silver Spades - Videos</title>
-    <link rel="stylesheet" href="css/main.scss" />
-    <link rel="stylesheet" href="fa/css/all.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container-header">
-        <div class="brand">
-          <div class="logo">
-            <a href="/">
-              <img
-                src="assets/img/logo-transparent.png"
-                alt="Silver Spades Logo"
-              />
-            </a>
-          </div>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+        <link href="./assets/img/favicon.png" rel="icon"/>
+        <title>Silver Spades - Videos</title>
+        <link href="css/main.scss" rel="stylesheet"/>
+        <link href="fa/css/all.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div class="container-header">
+                <div class="brand">
+                    <div class="logo">
+                        <a href="/">
+                            <img alt="Silver Spades Logo" src="assets/img/logo-transparent.png"/>
+                        </a>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="active" href="videos.html">VIDEOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="events.html">EVENTS</a>
+                        </li>
+
+                    </ul>
+                    <div class="toggle">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div data-router-wrapper>
+            <div data-router-view="videos">
+                <section class="videos-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <h1>Videos</h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="video-gallery-section">
+                    <div class="container">
+                        <div class="video-gallery">
+                            <div class="row">
+                                <div class="col l6 video-item" style="position:relative;">
+                                    <a class="video-thumb js-trigger-video-modal" data-youtube-id="PFeDD7K_x8g" href="#">
+                                        <img alt="" class="responsive-img video-thumb-img" src="./assets/img/twisted-thumb.png"/>
+                                        <span class="fa fa-play-circle video--play-icon"></span>
+                                    </a>
+                                </div>
+                                <div class="col l6 video-item__description">
+                                    <h3>Eric Reprid | Twisted</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea numquam facere cumque magni illum minima laboriosam, perspiciatis, provident ipsam consectetur reprehenderit. Eaque, ullam. Unde, non quam. Perspiciatis qui minus tenetur!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col l6 video-item" style="position:relative;">
+                                <a class="video-thumb js-trigger-video-modal" data-youtube-id="3N_n5Qzk5AA" href="#">
+                                    <img alt="" class="responsive-img video-thumb-img" src="./assets/img/hola-mami-thumb.png"/>
+                                    <span class="fa fa-play-circle video--play-icon"></span>
+                                </a>
+                            </div>
+                            <div class="col l6 video-item__description">
+                                <h3>Eric Reprid | Twisted</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea numquam facere cumque magni illum minima laboriosam, perspiciatis, provident ipsam consectetur reprehenderit. Eaque, ullam. Unde, non quam. Perspiciatis qui minus tenetur!</p>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col l6 video-item" style="position:relative;">
+                                <a class="video-thumb js-trigger-video-modal" data-youtube-id="Gc5JcljAY6E" href="#">
+                                    <img alt="" class="responsive-img video-thumb-img" src="./assets/img/off-that-thumb.png"/>
+                                    <span class="fa fa-play-circle video--play-icon"></span>
+                                </a>
+                            </div>
+
+                            <div class="col l6 video-item__description">
+                                <h3>Eric Reprid | Twisted</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea numquam facere cumque magni illum minima laboriosam, perspiciatis, provident ipsam consectetur reprehenderit. Eaque, ullam. Unde, non quam. Perspiciatis qui minus tenetur!</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col l6 video-item" style="position:relative;">
+                                <a class="video-thumb js-trigger-video-modal" data-youtube-id="IqLyNhzQmXk" href="#">
+                                    <img alt="" class="responsive-img video-thumb-img" src="./assets/img/rose-gold-thumb.png"/>
+                                    <span class="fa fa-play-circle video--play-icon"></span>
+                                </a>
+                            </div>
+                            <div class="col l6 video-item__description">
+                                <h3>Eric Reprid | Twisted</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea numquam facere cumque magni illum minima laboriosam, perspiciatis, provident ipsam consectetur reprehenderit. Eaque, ullam. Unde, non quam. Perspiciatis qui minus tenetur!</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+            </div>
         </div>
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="/">HOME</a></li>
-            <li class="nav-item">
-              <a class="active" href="videos.html">VIDEOS</a>
-            </li>
-            <li class="nav-item"><a href="events.html">EVENTS</a></li>
-            <li class="nav-item"><a href="shops.html">SHOPS</a></li>
-          </ul>
-          <div class="toggle">
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div data-router-wrapper>
-      <div data-router-view="videos">
-        <section>
-          <div class="container">
-            <h1>Videos</h1>
-          </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col m12">
+                        <div class="center-align">
+                            <h3>KEEP IN TOUCH</h3>
+                            <div class="col l4"></div>
+
+                            <form class="col s12 l4">
+                                <div class="row">
+                                    <div class="input-field col s12 newsletter-form">
+                                        <input class="validate" id="email" type="email">
+                                        <label for="email">Email</label>
+                                        <button class="newsletter-form__submit" type="submit">
+                                            <i class="fas fa-chevron-right fa-lg align-vertical--middle"></i>
+                                        </button>
+                                        <span class="helper-text" data-error="wrong" data-success="right"></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col l4"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12">
+                        <div class="center-align">
+                            <p class="copyright">COPYRIGHT &copy; 2020 SILVERSPADES</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- video modal -->
+        <section class="video-modal">
+            <!-- Modal Content Wrapper -->
+            <div class="video-modal-content" id="video-modal-content">
+                <!-- iframe -->
+                <iframe allow="autoplay" allowfullscreen frameborder="0" height="100%" id="youtube" src="" width="100%"></iframe>
+
+                <a class="close-video-modal" href="#">
+                    <!-- X close video icon -->
+                    <svg height="24" style="enable-background:new 0 0 32 32;" version="1.1" viewbox="0 0 32 32" width="24" x="0" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0">
+                        <g id="icon-x-close">
+                            <path d="M30.3448276,31.4576271 C29.9059965,31.4572473 29.4852797,31.2855701 29.1751724,30.980339 L0.485517241,2.77694915 C-0.122171278,2.13584324 -0.104240278,1.13679247 0.52607603,0.517159487 C1.15639234,-0.102473494 2.17266813,-0.120100579 2.82482759,0.477288136 L31.5144828,28.680678 C31.9872448,29.1460053 32.1285698,29.8453523 31.8726333,30.4529866 C31.6166968,31.0606209 31.0138299,31.4570487 30.3448276,31.4576271 Z" fill="#ffffff" id="Shape"></path>
+                            <path d="M1.65517241,31.4576271 C0.986170142,31.4570487 0.383303157,31.0606209 0.127366673,30.4529866 C-0.12856981,29.8453523 0.0127551942,29.1460053 0.485517241,28.680678 L29.1751724,0.477288136 C29.8273319,-0.120100579 30.8436077,-0.102473494 31.473924,0.517159487 C32.1042403,1.13679247 32.1221713,2.13584324 31.5144828,2.77694915 L2.82482759,30.980339 C2.51472031,31.2855701 2.09400353,31.4572473 1.65517241,31.4576271 Z" fill="#ffffff" id="Shape"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <!-- end modal content wrapper -->
+                                                    
+                                                                <!-- clickable overlay element -->
+            <div class="overlay"></div>
         </section>
-      </div>
-    </div>
-    <script defer src="js/main.js"></script>
-  </body>
+        <!-- end video modal -->
+        <script defer src="js/main.js"></script>
+        <script defer src="js/videoModal.js"></script>
+
+    </body>
 </html>

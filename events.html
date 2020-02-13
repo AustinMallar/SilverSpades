@@ -1,53 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" href="./assets/img/favicon.png" />
-    <title>Silver Spades - Events</title>
-    <link rel="stylesheet" href="css/main.scss" />
-    <link rel="stylesheet" href="fa/css/all.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container-header">
-        <div class="brand">
-          <div class="logo">
-            <a href="/">
-              <img
-                src="assets/img/logo-transparent.png"
-                alt="Silver Spades Logo"
-              />
-            </a>
-          </div>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+        <link href="./assets/img/favicon.png" rel="icon"/>
+        <title>Silver Spades - Events</title>
+        <link href="css/main.scss" rel="stylesheet"/>
+        <link href="fa/css/all.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div class="container-header">
+                <div class="brand">
+                    <div class="logo">
+                        <a href="/">
+                            <img alt="Silver Spades Logo" src="assets/img/logo-transparent.png"/>
+                        </a>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="videos.html">VIDEOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="active" href="events.html">EVENTS</a>
+                        </li>
+
+                    </ul>
+                    <div class="toggle">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div data-router-wrapper>
+            <div data-router-view="events">
+                <section>
+                    <div class="container">
+                        <h1>Events</h1>
+                    </div>
+                </section>
+            </div>
         </div>
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="/">HOME</a></li>
-            <li class="nav-item"><a href="videos.html">VIDEOS</a></li>
-            <li class="nav-item">
-              <a class="active" href="events.html">EVENTS</a>
-            </li>
-            <li class="nav-item"><a href="shops.html">SHOPS</a></li>
-          </ul>
-          <div class="toggle">
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div data-router-wrapper>
-      <div data-router-view="events">
-        <section>
-          <div class="container">
-            <h1>Events</h1>
-          </div>
-        </section>
-      </div>
-    </div>
-    <script defer src="js/main.js"></script>
-  </body>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col m12">
+                        <div class="center-align">
+                            <h3>KEEP IN TOUCH</h3>
+                            <div class="col l4"></div>
+
+                            <form class="col s12 l4">
+                                <div class="row">
+                                    <div class="input-field col s12 newsletter-form">
+                                        <input class="validate" id="email" type="email">
+                                        <label for="email">Email</label>
+                                        <button class="newsletter-form__submit" type="submit">
+                                            <i class="fas fa-chevron-right fa-lg align-vertical--middle"></i>
+                                        </button>
+                                        <span class="helper-text" data-error="wrong" data-success="right"></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col l4"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12">
+                        <div class="center-align">
+                            <p class="copyright">COPYRIGHT &copy; 2020 SILVERSPADES</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <script defer src="js/main.js"></script>
+    </body>
 </html>

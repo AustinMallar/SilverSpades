@@ -8,6 +8,7 @@ $primary-fontColor: white;
 $secondary-fontColor: black;
 $accent: #f53258;
 $primary-overlay: rgba(0, 0, 0, 0.1);
+$secondary-overlay: rgba(0, 0, 0, 0.7);
 $mobile-nav-overlay: rgba(0, 0, 0, 0.8);
 
 /* SPACING */
@@ -22,6 +23,14 @@ $mobile: 768px;
 @mixin center-element-abs {
   transform: translate(-50%, -50%);
 }
+
+@mixin container-props {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FONTS */
 
 @font-face {
   font-family: "HelveticaNeue";
@@ -53,10 +62,9 @@ $mobile: 768px;
   font-weight: 400;
 }
 
-@mixin container-props {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+@font-face {
+  font-family: "Venus Rising";
+  src: url("../assets/fonts/venus-rising/venus-rising.ttf");
 }
 
 * {
@@ -65,8 +73,26 @@ $mobile: 768px;
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Venus Rising";
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+.nexa {
+  font-family: "NexaLight";
+}
+
 body {
   background: $primary-bg;
+  color: $primary-fontColor;
   font-family: "HelveticaNeue", Arial, sans-serif;
 }
 
@@ -215,9 +241,135 @@ a {
   text-decoration: none;
 }
 
+/* SECTIONS */
+
 section {
   position: relative;
+  padding: 3em 0;
 }
+
+.welcome {
+  border: 2px solid $primary-fontColor;
+  border-left-width: 0;
+  border-right-width: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/img/welcome-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+  }
+}
+
+.about-aze {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../assets/img/aze.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-top: -0.8em;
+    letter-spacing: 0.15em;
+  }
+}
+
+.submit-music {
+  padding: 8em 0;
+  background: url("../assets/img/submit-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $secondary-overlay;
+    z-index: -1;
+  }
+
+  &__review {
+    font-size: 1.7rem;
+    margin-bottom: -1.1em;
+    font-style: italic;
+  }
+
+  &__btn {
+    background: $secondary-bg;
+    color: $secondary-fontColor;
+    font-family: "Venus Rising";
+
+    &:hover {
+      background: $primary-bg;
+      color: $primary-fontColor;
+    }
+  }
+}
+
+.videos-section {
+  min-height: 40vh;
+  background: url("../assets/img/off-that-thumb.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-gallery-section {
+  padding: 7em 0;
+}
+
+/* END OF SECTIONS */
+
+/* FOOTER */
+
+footer {
+  position: relative;
+  padding: 4em 0;
+  background: $secondary-bg;
+  color: $secondary-fontColor;
+
+  &::before {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 155px;
+    height: 110px;
+    transform: translate(-50%, -50%);
+    background-image: url("../assets/img/silver-spade-footer-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
+}
+
+/* END FOOTER */
 
 .container {
   width: 90%;
@@ -329,6 +481,16 @@ section {
 
 .btn {
   transition: 0.3s;
+}
+
+/* ACCENTS */
+
+.bold {
+  font-family: "Venus Rising";
+}
+
+.accent {
+  color: $accent;
 }
 
 .future__accent {
@@ -470,4 +632,77 @@ section {
 .video-item {
   $video-margin: 0.7em;
   margin: $video-margin 0;
+
+  &__description {
+    color: $primary-fontColor;
+
+    h3 {
+      font-family: "Venus Rising";
+      font-size: 2.2rem;
+    }
+  }
+}
+
+/* CUSTOM BUTTONS */
+
+.view-more-btn {
+  font-family: "Venus Rising";
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  margin: 2em auto;
+
+  &:hover {
+    i {
+      margin-left: 20px;
+    }
+  }
+
+  i {
+    font-size: 2rem;
+    margin: 0 0.2em;
+    transition: margin-left 0.3s ease-in-out;
+  }
+}
+
+/* INPUTS AND LABELS */
+
+#email {
+  position: relative;
+  + label {
+    transition: all 0.3s;
+  }
+}
+
+#email:focus {
+  border-bottom-color: $accent;
+  box-shadow: 0 1px 0 0 $accent;
+
+  + label {
+    color: $accent;
+    transform: translateY(-20px);
+  }
+}
+
+.newsletter-form {
+  &__submit {
+    position: absolute;
+    background: none;
+    border: none;
+    bottom: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* END INPUTS AND LABELS */
+
+/* HELPERS */
+
+.align-vertical {
+  &--middle {
+    vertical-align: middle;
+  }
 }

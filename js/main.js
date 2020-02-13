@@ -3,6 +3,7 @@ import Highway from "@dogstudio/highway";
 
 import Fade from "./fade.js";
 import HomeRenderer from "./Renderers/homeRenderer.js";
+import VideoRenderer from "./Renderers/videoRenderer.js";
 
 const toggle = document.querySelector(".toggle");
 const links = document.querySelectorAll(".nav-item a");
@@ -86,7 +87,8 @@ const H = new Highway.Core({
     default: Fade
   },
   renderers: {
-    home: HomeRenderer
+    home: HomeRenderer,
+    videos: VideoRenderer
   }
 });
 
