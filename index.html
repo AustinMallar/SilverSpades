@@ -61,8 +61,8 @@
                     <source src="assets/website-banner.m4v" type="video/mp4" />
                 </video>
 
-                <img alt="" class="hero__logo" src="assets/img/Silver-Spades-Logo.png">
-                <h2 class="hero__sub-headline">Music of the Future</h2>
+                <img id="hero-logo" alt="Silver Spades Logo" class="hero__logo" src="assets/img/Silver-Spades-Logo.png">
+                <h2 id="hero-headline" class="hero__sub-headline">Music of the Future</h2>
 
                 <div class="social-icons">
                     <a href="https://www.youtube.com/channel/UCdr1Zb-hJ5pTa7YPOZtxLSQ" target="_blank">
@@ -86,42 +86,49 @@
                                 </h1>
                         </div>
                     </div>
-                    <div class="video-gallery">
                         <div class="row">
+                            <div class="video-item">
+                                <div class="col l6 video-item" style="position:relative;">
+                                    <a class="video-thumb js-trigger-video-modal" data-youtube-id="PFeDD7K_x8g" href="#">
+                                        <img alt="" class="responsive-img video-thumb-img" src="./assets/img/twisted-thumb.png" />
+                                        <span class="fa fa-play-circle video--play-icon"></span>
+                                    </a>
+                                </div>
+                                <div class="col l6 video-item__description">
+                                    <h3>Eric Reprid | Twisted</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    <div class="row">
+                        <div class="video-item">
                             <div class="col l6 video-item" style="position:relative;">
-                                <a class="video-thumb js-trigger-video-modal" data-youtube-id="PFeDD7K_x8g" href="#">
-                                    <img alt="" class="responsive-img video-thumb-img" src="./assets/img/twisted-thumb.png" />
+                                <a class="video-thumb js-trigger-video-modal" data-youtube-id="3N_n5Qzk5AA" href="#">
+                                    <img alt="" class="responsive-img video-thumb-img" src="./assets/img/hola-mami-thumb.png" />
                                     <span class="fa fa-play-circle video--play-icon"></span>
                                 </a>
                             </div>
                             <div class="col l6 video-item__description">
-                                <h3>Eric Reprid | Twisted</h3>
+                                <h3>Jax | Hola Mami</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col l6 video-item" style="position:relative;">
-                            <a class="video-thumb js-trigger-video-modal" data-youtube-id="3N_n5Qzk5AA" href="#">
-                                <img alt="" class="responsive-img video-thumb-img" src="./assets/img/hola-mami-thumb.png" />
-                                <span class="fa fa-play-circle video--play-icon"></span>
-                            </a>
-                        </div>
-                        <div class="col l6 video-item__description">
-                            <h3>Jax | Hola Mami</h3>
-                        </div>
+                       
 
                     </div>
                     <div class="row">
-                        <div class="col l6 video-item" style="position:relative;">
-                            <a class="video-thumb js-trigger-video-modal" data-youtube-id="Gc5JcljAY6E" href="#">
-                                <img alt="" class="responsive-img video-thumb-img" src="./assets/img/off-that-thumb.png" />
-                                <span class="fa fa-play-circle video--play-icon"></span>
-                            </a>
+                        <div class="video-item">
+                            <div class="col l6 video-item" style="position:relative;">
+                                <a class="video-thumb js-trigger-video-modal" data-youtube-id="Gc5JcljAY6E" href="#">
+                                    <img alt="" class="responsive-img video-thumb-img" src="./assets/img/off-that-thumb.png" />
+                                    <span class="fa fa-play-circle video--play-icon"></span>
+                                </a>
+                            </div>
+    
+                            <div class="col l6 video-item__description">
+                                <h3>JMON | Off That</h3>
+                            </div>
                         </div>
-
-                        <div class="col l6 video-item__description">
-                            <h3>JMON | Off That</h3>
-                        </div>
+                        
                     </div>
                     <!-- <div class="col m6 video-item" style="position:relative;">
                                     <a class="video-thumb js-trigger-video-modal" data-youtube-id="IqLyNhzQmXk" href="#">
@@ -209,13 +216,13 @@
 
     </div>
     </div>
-    
+
     <!--Footer-->
 
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col m12">
+                <div class="col s12">
                     <div class="center-align">
                         <h3>KEEP IN TOUCH</h3>
                         <div class="col l4"></div>
@@ -239,7 +246,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col m12">
+                <div class="col s12">
                     <div class="center-align">
                         <p class="copyright">COPYRIGHT &copy; 2020 SILVERSPADES</p>
 

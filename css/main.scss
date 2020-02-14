@@ -81,6 +81,24 @@ h5 {
   font-family: "Venus Rising";
 }
 
+h1 {
+  @media screen and (max-width: $mobile) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  @media screen and (max-width: $mobile) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  @media screen and (max-width: $mobile) {
+    font-size: 1.7rem;
+  }
+}
+
 p {
   font-size: 1.1rem;
   margin-bottom: 1em;
@@ -282,12 +300,21 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__title {
     font-size: 2rem;
     margin-top: -0.8em;
     letter-spacing: 0.15em;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 1.2rem;
+      margin-top: -1em;
+    }
   }
 }
 
@@ -314,6 +341,10 @@ section {
     font-size: 1.7rem;
     margin-bottom: -1.1em;
     font-style: italic;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 1.2rem;
+    }
   }
 
   &__btn {
@@ -346,7 +377,7 @@ section {
 
 footer {
   position: relative;
-  padding: 4em 0;
+  padding: 4em 0 1em 0;
   background: $secondary-bg;
   color: $secondary-fontColor;
 
@@ -416,6 +447,7 @@ footer {
   }
 
   &__logo {
+    opacity: 0;
     width: 75%;
     min-width: 440px;
     max-width: 1200px;
@@ -426,6 +458,7 @@ footer {
   }
 
   &__sub-headline {
+    opacity: 0;
     font-family: "NexaLight";
     position: absolute;
     top: 50%;
@@ -532,6 +565,12 @@ footer {
         }
       }
     }
+
+    .btn {
+      font-size: 1.7rem;
+      background: $primary-bg !important;
+      color: $primary-fontColor;
+    }
   }
 
   h1 {
@@ -637,8 +676,11 @@ footer {
     color: $primary-fontColor;
 
     h3 {
-      font-family: "Venus Rising";
       font-size: 2.2rem;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -653,6 +695,10 @@ footer {
   display: inline-block;
   width: auto;
   margin: 2em auto;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 1rem;
+  }
 
   &:hover {
     i {

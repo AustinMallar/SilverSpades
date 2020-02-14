@@ -7,6 +7,37 @@ import VideoRenderer from "./Renderers/videoRenderer.js";
 
 const toggle = document.querySelector(".toggle");
 const links = document.querySelectorAll(".nav-item a");
+
+function checkLoad() {
+  const video = document.querySelector("#video-bg");
+  const heroLogo = document.querySelector("#hero-logo");
+  const heroHeadline = document.querySelector("#hero-headline");
+
+  if (video.readyState === 4) {
+    var t0 = new TimelineMax();
+    t0.to(heroLogo, 0.6, {
+      opacity: 1,
+      y: -50,
+      ease: Expo.easeOut
+    }).to(heroHeadline, 0.5, {
+      opacity: 1,
+      y: -30,
+      ease: Expo.easeOut,
+      delay: +0.5
+    });
+  } else {
+    setTimeout(checkLoad, 100);
+  }
+}
+
+window.addEventListener(
+  "load",
+  function() {
+    checkLoad();
+  },
+  false
+);
+
 let menuOpen = false;
 var t1 = new TimelineMax({ paused: true });
 var t2 = new TimelineMax();

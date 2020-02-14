@@ -2,8 +2,38 @@ import Highway from "@dogstudio/highway";
 import { TimelineMax, Expo, TweenLite } from "gsap";
 import $ from "jquery";
 
+function checkLoad() {
+  const video = document.querySelector("#video-bg");
+  const heroLogo = document.querySelector("#hero-logo");
+  const heroHeadline = document.querySelector("#hero-headline");
+
+  if (video.readyState === 4) {
+    var t0 = new TimelineMax();
+    t0.to(heroLogo, 0.6, {
+      opacity: 1,
+      y: -50,
+      ease: Expo.easeOut
+    }).to(heroHeadline, 0.5, {
+      opacity: 1,
+      y: -30,
+      ease: Expo.easeOut,
+      delay: +0.5
+    });
+  } else {
+    setTimeout(checkLoad, 100);
+  }
+}
+
 class HomeRenderer extends Highway.Renderer {
   onEnter() {
+    window.addEventListener(
+      "load",
+      function() {
+        checkLoad();
+      },
+      false
+    );
+
     $(document).ready(function() {
       /* Toggle Video Modal
         -----------------------------------------*/
@@ -66,7 +96,9 @@ class HomeRenderer extends Highway.Renderer {
       toggle_video_modal();
     });
   }
-  onLeave() {}
+  onLeave() {
+    window.removeEventListener("load", checkLoad);
+  }
   onEnterCompleted() {
     var socialIconTL = new TimelineMax();
     socialIconTL.staggerFromTo(
