@@ -11,6 +11,11 @@ $primary-overlay: rgba(0, 0, 0, 0.1);
 $secondary-overlay: rgba(0, 0, 0, 0.7);
 $mobile-nav-overlay: rgba(0, 0, 0, 0.8);
 
+/* HEADER */
+:root {
+  --header-height: 75px;
+}
+
 /* SPACING */
 $header-padding: 0.4em 0;
 
@@ -272,7 +277,6 @@ section {
     background: $secondary-bg;
 
     p,
-    a,
     span,
     ol,
     ul,
@@ -284,6 +288,32 @@ section {
     h5 {
       color: $secondary-fontColor !important;
     }
+
+    a {
+      color: $accent;
+    }
+  }
+}
+
+.blog-post-heading {
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $secondary-overlay;
+    z-index: -1;
   }
 }
 
