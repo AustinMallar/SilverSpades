@@ -82,18 +82,21 @@ h5 {
 }
 
 h1 {
+  font-size: 3.5rem !important;
   @media screen and (max-width: $mobile) {
     font-size: 2.5rem;
   }
 }
 
 h2 {
+  font-size: 2.6rem !important;
   @media screen and (max-width: $mobile) {
     font-size: 2rem;
   }
 }
 
 h3 {
+  font-size: 2rem !important;
   @media screen and (max-width: $mobile) {
     font-size: 1.7rem;
   }
@@ -264,6 +267,24 @@ a {
 section {
   position: relative;
   padding: 3em 0;
+
+  &.white {
+    background: $secondary-bg;
+
+    p,
+    a,
+    span,
+    ol,
+    ul,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $secondary-fontColor !important;
+    }
+  }
 }
 
 .welcome {
@@ -498,13 +519,13 @@ footer {
     padding-top: 4em;
     text-align: center;
     color: $primary-fontColor;
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     @include center-element-abs();
 
     @media screen and (max-width: $mobile) {
-      font-size: 1rem;
+      font-size: 1rem !important;
       padding-top: 2em;
     }
   }
