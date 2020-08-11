@@ -13,26 +13,28 @@ function checkLoad() {
   const heroLogo = document.querySelector("#hero-logo");
   const heroHeadline = document.querySelector("#hero-headline");
 
-  if (video.readyState === 4) {
-    var t0 = new TimelineMax();
-    t0.to(heroLogo, 0.6, {
-      opacity: 1,
-      y: -50,
-      ease: Expo.easeOut
-    }).to(heroHeadline, 0.5, {
-      opacity: 1,
-      y: -30,
-      ease: Expo.easeOut,
-      delay: +0.5
-    });
-  } else {
-    setTimeout(checkLoad, 100);
+  if (video !== null) {
+    if (video.readyState === 4) {
+      var t0 = new TimelineMax();
+      t0.to(heroLogo, 0.6, {
+        opacity: 1,
+        y: -50,
+        ease: Expo.easeOut,
+      }).to(heroHeadline, 0.5, {
+        opacity: 1,
+        y: -30,
+        ease: Expo.easeOut,
+        delay: +0.5,
+      });
+    } else {
+      setTimeout(checkLoad, 100);
+    }
   }
 }
 
 window.addEventListener(
   "load",
-  function() {
+  function () {
     checkLoad();
   },
   false
@@ -43,15 +45,15 @@ var t1 = new TimelineMax({ paused: true });
 var t2 = new TimelineMax();
 
 t2.from(".logo", 0.7, {
-  opacity: 0
+  opacity: 0,
 });
 
 t2.from(".nav-list", 0.7, {
-  opacity: 0
+  opacity: 0,
 });
 
 t2.from(".toggle", 1, {
-  opacity: 0
+  opacity: 0,
 });
 
 //Timeline for mobile nav menu
@@ -62,7 +64,7 @@ if (window.innerWidth < 1025) {
     {
       width: "0px",
       ease: Expo.easeIn,
-      immediateRender: false
+      immediateRender: false,
     },
     0.1
   );
@@ -70,7 +72,7 @@ if (window.innerWidth < 1025) {
   t1.to(".nav-list", 1, {
     scaleY: 1,
     ease: Expo.easeIn,
-    delay: 0.5
+    delay: 0.5,
   });
 
   t1.staggerFrom(
@@ -82,20 +84,20 @@ if (window.innerWidth < 1025) {
 
   t1.to("#ham1", 0.1, {
     rotation: 45,
-    background: "black"
+    background: "black",
   });
 
   t1.to("#ham2", 0.1, {
     rotation: -45,
-    background: "black"
+    background: "black",
   });
 
   t1.to("#ham1", 0.2, {
-    width: "30px"
+    width: "30px",
   });
 
   t1.to("#ham2", 0.2, {
-    width: "30px"
+    width: "30px",
   });
 }
 
@@ -115,12 +117,12 @@ toggle.addEventListener("click", () => {
 // Call Highway.Core once.
 const H = new Highway.Core({
   transitions: {
-    default: Fade
+    default: Fade,
   },
   renderers: {
     home: HomeRenderer,
-    videos: VideoRenderer
-  }
+    videos: VideoRenderer,
+  },
 });
 
 // Listen the `NAVIGATE_IN` event
