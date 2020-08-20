@@ -90,6 +90,7 @@ h5 {
 
 h1 {
   font-size: 3.5rem !important;
+
   @media screen and (max-width: $mobile) {
     font-size: 2.5rem;
   }
@@ -97,6 +98,7 @@ h1 {
 
 h2 {
   font-size: 2.6rem !important;
+
   @media screen and (max-width: $mobile) {
     font-size: 2rem;
   }
@@ -104,6 +106,7 @@ h2 {
 
 h3 {
   font-size: 2rem !important;
+
   @media screen and (max-width: $mobile) {
     font-size: 1.7rem;
   }
@@ -334,6 +337,7 @@ section {
 article {
   background: $secondary-bg;
   padding-bottom: 4em;
+
   h1,
   h2,
   h3,
@@ -526,7 +530,7 @@ footer {
     position: absolute;
     left: 50%;
     top: 0;
-    width: 155px;
+    width: 162px;
     height: 110px;
     transform: translate(-50%, -50%);
     background-image: url("../assets/img/silver-spade-footer-logo.png");
@@ -832,7 +836,7 @@ footer {
 
 .video-thumb-img {
   &:hover {
-    + .video--play-icon {
+    +.video--play-icon {
       transform: translate(-50%, -50%) scale(1.5);
     }
   }
@@ -887,7 +891,8 @@ footer {
 
 #email {
   position: relative;
-  + label {
+
+  +label {
     transition: all 0.3s;
   }
 }
@@ -902,7 +907,7 @@ label[for="mc-embedded-subscribe"] {
   border-bottom-color: $accent;
   box-shadow: 0 1px 0 0 $accent;
 
-  + label {
+  +label {
     color: $accent;
     transform: translateY(-20px);
   }
